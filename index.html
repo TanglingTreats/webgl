@@ -6,8 +6,22 @@
     <div class="content">
       <h2>Web GL Test</h2>
       <canvas id="screen">
-
       </canvas>
+      <script id="vertex-shader" type="notjs">
+        attribute vec4 aPosition;
+
+        void main() {
+          gl_Position = aPosition;
+        }
+      </script>
+      <script id="fragment-shader" type="notjs">
+        precision mediump float;
+
+        void main() {
+          gl_FragColor = vec4(1, 0, 0.5, 1);
+        }
+      </script>
+      <script src="./index.js" type="text/javascript"/>
     </div>
   </body>
 </html>
